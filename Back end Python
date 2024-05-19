@@ -1,0 +1,36 @@
+from flask import Flask, render_template, request
+import mysql.connector
+
+app = Flask(__name__)
+
+# Conectar ao banco de dados MySQL
+conn = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="x",
+  database="carrinho"
+)
+
+
+# Rota para a aplicação
+@app.route('/')
+def pedido ():
+    return render_template('index.html')
+
+@app.route('/submit')
+def adicionar_item():
+    data = request.json
+    nome = data.get('nome')
+    produto = data.get('produto')
+
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO carrinho (nome, produto) VALUES (%s, %s)", (nome, produto))
+    conn.commit()
+
+    cursor.execute("SELECT * FROM carrinho")
+    cursor.close()
+
+    return render_template('pedidos.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
