@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('carrinho-form');
+    const carrinho = document.getElementById('carrinho');
+
+    form.addEventListener('submit', function(){
+        alert('Botão Clicado!');
+
+        const nome = document.getElementById('nome').value;
+        const produto = document.getElementById('produto').value;
+
+
+        carrinho.textContent = `Nome: ${nome}, Produto: ${produto}`;
+    });
+});
