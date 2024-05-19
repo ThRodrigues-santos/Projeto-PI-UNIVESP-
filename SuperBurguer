@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="StyleSuperBurguer.css"> 
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}"> 
         <title>SuperBurguer</title>
-        <script async src="loja.js"></script>
-          
+        <script async src="script.js"></script>
     </head>
     <body>
         <header class="Content">
@@ -17,11 +16,12 @@
             </div>
             <nav>
                 <ul class="List-menu">
-                    <li><a href="a">Home</a></li>
-                    <li><a href="a">Sobre nós</a></li>
-                    <li><a href="a">Cardápio</a></li>
-                    <li><a href="a">Contatos</a></li>
-                    <li><a href="a">Pedidos</a></li>
+                    <li><a href="app.html">Home</a></li> 
+                    <!-- no ahref vc vai usar o id que vai encontrar na ancora, usando um # para direcionar o link pra ancora -->
+                    <li><a href="#sobrenos">Sobre nós</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
 
                 </ul>
             </nav>
@@ -31,9 +31,6 @@
         <section class="first-section">
             <div class="conteudo">
                 <h1>Faça o pedido de seu Super Burguer</h1>
-                <div class="caixa-botoes">
-                    <button class="Fazer-pedido">Quero Receber</button>
-                    <button class="Retire">Quero Retirar!</button>
                 </div>
             </div>
         </section>
@@ -44,94 +41,79 @@
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
                         <h3 class="Title">X-Burguer</h3>
-                        <h4>Valor <span class="price">R$1,00</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h4>Valor <span class="price">R$16,90</span></h4>
+                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e Molho</p>
                     </div>
                 </div>
 
                 <div class="movie-product">
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
-                        <h3 class="Title">X-Saladar</h3>
-                        <h4>Valor <span class="price">R$16,90</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h3 class="Title">X-Salada</h3>
+                        <h4>Valor <span class="price">R$18,90</span></h4>
+                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo, Alface, Tomate e Molho</p>
                     </div>
                 </div>
                 <div class="movie-product">
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
                         <h3 class="Title">X-Bacon</h3>
-                        <h4>Valor <span class="price">R$1,00</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h4>Valor <span class="price">R$20,90</span></h4>
+                        <p> Pão de Brioche, Hamburguer Artesanal, Queijo, Alface, Tomate, Bacon e Molho</p>
                     </div>
                 </div>
                 <div class="movie-product">
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
                         <h3 class="Title">X-Egg</h3>
-                        <h4>Valor <span class="price">R$1,00</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h4>Valor <span class="price">R$20,90</span></h4>
+                        <p> Pão de Brioche, Hamburguer Artesanal, Queijo, Alface, Tomate, Ovo e Molho</p>
                     </div>
                 </div>
                 <div class="movie-product">
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
                         <h3 class="Title">X-Tudo</h3>
-                        <h4>Valor <span class="price">R$1,00</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h4>Valor <span class="price">R$21,90</span></h4>
+                        <p> Pão de brioche, Hamburguer Artesanal, Queijo, Alface, Tomate, Bacon, Ovo e Molho</p>
                     </div>
                 </div>
                 <div class="movie-product">
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
                         <h3 class="Title">Contra-file</h3>
-                        <h4>Valor <span class="price">R$1,00</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h4>Valor <span class="price">R$21,90</span></h4>
+                        <p> Pão Parmesão, Contra Filé, Queijo, Molho e Vinagrete</p>
                     </div>
                 </div>
                 <div class="movie-product">
                     <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain" alt="imagem generica" class="product-image">
                     <div class="info">
-                        <h3 class="Title">File de frango</h3>
-                        <h4>Valor <span class="price">R$1,00</span></h4>
-                        <p> Pão Tradicional, Hamburguer Artesanal, Queijo e molho</p>
-                        <button class="pedir">Comprar</button>
+                        <h3 class="Title">File de Frango</h3>
+                        <h4>Valor <span class="price">R$17,90</span></h4>
+                        <p> Pão Parmesão, Filé de Frango, Queijo, Molho e Vinagrete</p>
                     </div>
                 </div>
             </div>
 
         </Section>
-        <section class="carrinho" id="carrinho">
-            <h2>Carrinho</h2>
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th class="table-head-item first-col">item</th>
-                        <th class="table-head-item second-col">Preço</th>
-                        <th class="table-head-item third-col">Qtde</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                 
-                </tbody>
-
-                <tfoot>
-                    <td colspan="3" class="cart-total-container">
-                        <strong>Total</strong>
-                        <span>R$0,00</span>
-                    </td>
-                </tfoot>
-            </table>
-            <button class="purchase-button" type="button">Finalizar compra</button>
+        <section class="container">
+            <h1>Carrinho de Compras</h1>
+            <form id="carrinho-form">
+                <div class="form-group">
+                    <label for="nome">Nome do Cliente:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" name="produto" required>
+                </div>
+                <button type="submit" >Adicionar ao Carrinho</button>
+            </form>
+            <div id="carrinho">
+                <!-- Aqui serão exibidos os itens do carrinho -->
+            </div>
         </section>
-
         <section class="Sobre-nos" id="sobrenos">
             <div class="main">
                 <div class="img-lanchonete">
@@ -139,24 +121,22 @@
                 </div>
                 <div class="contentlanchonete">
                     <h2>Sobre nós</h2>
-                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaComo estou com preguiça de escrever, vou cantar marilia mendonça:
-                        Que o Sol da manhã te dissolva
-                        Seu vampiro de filmes pastelão
-                        Mas quem vhdgdgjhdgjdjgai nos julgar?
-                        Sou seu despenteado leão
-                        Sei que cê me entende bem
-                        Sempre foge quando namora
-                        Se você não ama ninguém
-                        Por que tá me escutando agora? </p>
+                    <p>Bem-vindo à Super Burguer, o destino definitivo para os amantes de hambúrgueres em busca de uma experiência
+                         gastronômica excepcional. Fundada com paixão e dedicação, a Super Burguer se destaca como um oásis para os
+                          aficionados por hambúrgueres, onde cada mordida é uma celebração do sabor e da qualidade. Na Super Burguer,
+                           não apenas servimos hambúrgueres, mas criamos obras-primas culinárias, combinando ingredientes frescos e
+                            saborosos para proporcionar uma explosão de sabores em cada bite. Nossa equipe de chefs talentosos está 
+                            empenhada em elevar o padrão do hambúrguer clássico, reinventando-o com toques criativos e inovadores que
+                             surpreendem e encantam os paladares mais exigentes. 
+                    </p>
                 </div>
             </div>
 
         </section>
         <section class="contatos" id="contatos">
             <h3>Contatos</h3>
-            <p>Escrever contatos bla bla bla</p>
+            <p>11 9 9422 1261</p>
 
         </section>
-        <footer> Site criado por Alunos Univesp - Projeto Integrador Grupo ZZ - 2024</footer>
     </body>
 </html>
