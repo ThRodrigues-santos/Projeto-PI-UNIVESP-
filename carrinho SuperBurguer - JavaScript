@@ -1,14 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('carrinho-form');
-    const carrinho = document.getElementById('carrinho');
+document.getElementById('cartForm').addEventListener('submit',
+function(event) {
+    event.preventDefault();
 
-    form.addEventListener('submit', function(){
-        alert('Botão Clicado!');
+    const customerName = document.getElementById('customerName').value;
+    const productName = document.getElementById('productName').value;
 
-        const nome = document.getElementById('nome').value;
-        const produto = document.getElementById('produto').value;
-
-
-        carrinho.textContent = `Nome: ${nome}, Produto: ${produto}`;
+fetch('/add', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body:
+`customerName=${encodeURIComponent(customerName)}&productName=${encodeURI
+Component(productName)}`,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            loadProducts(customerName);
+            document.getElementById('productName').value = '';
+        }
     });
 });
+function loadProducts(customerName) {
+    fetch(`/list?customerName=${encodeURIComponent(customerName)}`)
+    .then(response => response.json())
+    .then(products => {
+        const productList = document.getElementById('productList');
+        productList.innerHTML = '';
+        products.forEach(product => {
+            const productItem = document.createElement('div');
+            productItem.className = 'product-item';
+            productItem.innerHTML = `<span>${product[0]}</span>`;
+            productList.appendChild(productItem);
+        });
+    });
+}
