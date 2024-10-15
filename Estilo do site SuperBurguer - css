@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
+@import
+url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rob
+oto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500
+;1,700;1,900&display=swap');
 
 *{
     margin: 0;
@@ -10,7 +11,6 @@
     border: none;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
-
 }
 
 html {
@@ -30,7 +30,6 @@ html {
     background-color: #141414;
     position: fixed;
     padding-left: 30rem;
-
 }
 
 .logo{
@@ -39,7 +38,6 @@ html {
     cursor: pointer;
     display: flex;
     align-items: center;
-
 }
 
 .logo h3{
@@ -49,7 +47,6 @@ html {
 .logo img{
     width: 100%;
     height: 100%;
-
 }
 
 .Content .List-menu {
@@ -57,7 +54,6 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 .Content .List-menu li a {
     padding-top: 3rem;
@@ -75,7 +71,6 @@ html {
     border-bottom: 4px solid #05d613;
     color: #05d613;
 }
-
 /* first-section*/
 /*verificar se colocamos imagem de fundo*/
 .first-section{
@@ -87,13 +82,11 @@ html {
     align-items: center;
     background-color: #3d3c3c;
 }
-
 .first-section .conteudo{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 .first-section h1{
     color: #05d613;
@@ -126,25 +119,6 @@ html {
     justify-content: space-between;
 }
 
-/*Sobre-nos*/
-
-.Sobre-nos{
-    background-color: #1c1b1b;
-    width: 100%;
-    padding-bottom: 5rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Sobre-nos img{
-    width: 400px;
-    height: 400px;
-    margin-top: 10rem;
-    margin-left: 10rem;
-    border: 2px solid rgb(155, 155, 155);
-}
-
 .main{
     display: flex;
     justify-content: space-between;
@@ -156,17 +130,16 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 .contentlanchonete h2{
     font-size: 4rem;
     margin-bottom: 1rem;
 }
-
 .contentlanchonete p{
     text-align: center;
     font-size: 1.8rem;
     width: 600px;
 }
-
 
 /*cardapio*/
 
@@ -178,13 +151,10 @@ html {
     justify-content: center;
     background-color: #0b2c0e;
 }
-
 .cardapio h2 {
     font-size: 5rem;
     color: #e6e6e6;
-   
 }
-
 .itens-cardapio {
     width: 80%;
     margin-top: 2rem;
@@ -204,7 +174,6 @@ html {
     justify-content: center;
     padding: 1.4rem;
 }
-
 .itens-cardapio img{
     width: 100%;
     height: 200px;
@@ -225,7 +194,6 @@ html {
     grid-template-columns: 150px 150px;
     margin-left: 6rem;
 }
-
 .itens-cardapio .info h4 span{
     font-size: 1.5rem;
     margin-left: 1.5rem;
@@ -239,7 +207,6 @@ html {
     background-color: #3d3c3c;
     box-shadow: 0px 0px 6px 2px;
 }
-
 .itens-cardapio .info .pedir{
     width: 200px;
     height: 35px;
@@ -250,56 +217,90 @@ html {
     color: black;
     transition: all 200ms ease-in;
 }
-
 .itens-cardapio .info .pedir:hover{
     background-color: #0b2c0e;
     color: white;
 }
-
-.contatos {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 5rem;
-    color: white;
-    background-color: #3d3c3c;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+    margin: 0;
+    padding: 20px;
 }
-.contatos h3{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-.contatos p{
-    text-align: center;
-    font-size: 1.8rem;
-    width: 600px;
-}
-
-
-/*carrinho*/
 
 .container {
-    font-size: 1.4rem;
-    width: 100vw;
-    margin: 0 auto;
-    padding: 5rem;
+    max-width: 600px;
+    margin: auto;
+    background: #085705;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    font-size: 1.4rem;
-   margin-left: 10rem;
+h2 {
+    text-align: center;
+    color: #faeaea;
+    font-size: 5rem;
 }
 
-button {
-    font-size: 2rem;
-    padding: 1rem;
-    background-color: #13701f;
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #070606;
+}
+
+input[type="text"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0a131d;
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.product-list {
+    margin-top: 20px;
+}
+
+.product-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-item span {
+    font-size: 20px;
+    color: #333;
+}
+
+.remove-button {
+    background-color: #b8dc35;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #aac823;
 }
