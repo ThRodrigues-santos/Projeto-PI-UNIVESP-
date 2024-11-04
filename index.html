@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SuperBurguer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+    <meta name="description" content="Peça seu burger favorito no SuperBurguer!">
+    <meta property="og:title" content="SuperBurguer">
+    <meta property="og:description" content="Peça seu burger favorito no SuperBurguer!">
+    <meta property="og:image" content="{{ url_for('static', filename='img/logo-super-burguer.jpg') }}">
+    <meta property="og:url" content="https://projeto-super-burguer.vercel.app/">
+</head>
+
+<body>
+    <header class="Content" id="conteudo">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo-super-burguer.jpg') }}" alt="Logo">
+            <h3>Lanchonete SuperBurguer</h3>
+        </div>
+        <nav>
+            <ul class="List-menu">
+                <li><a href="#conteudo">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="first-section">
+        <div class="conteudo">
+            <h1>Faça o pedido do seu Super Burguer</h1>
+        </div>
+    </section>
+
+    <section class="cardapio" id="cardapio">
+        <h2>Cardápio</h2>
+        <div class="itens-cardapio">
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">X-Burguer</h3>
+                    <h4>Valor: <span class="price">R$16,90</span></h4>
+                    <p>Pão Tradicional, Hambúrguer Artesanal, Queijo e Molho</p>
+                </div>
+            </div>
+
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">X-Salada</h3>
+                    <h4>Valor: <span class="price">R$18,90</span></h4>
+                    <p>Pão Tradicional, Hambúrguer Artesanal, Queijo, Alface, Tomate e Molho</p>
+                </div>
+            </div>
+
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">X-Bacon</h3>
+                    <h4>Valor: <span class="price">R$20,90</span></h4>
+                    <p>Pão de Brioche, Hambúrguer Artesanal, Queijo, Alface, Tomate, Bacon e Molho</p>
+                </div>
+            </div>
+
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">X-Egg</h3>
+                    <h4>Valor: <span class="price">R$20,90</span></h4>
+                    <p>Pão de Brioche, Hambúrguer Artesanal, Queijo, Alface, Tomate, Ovo e Molho</p>
+                </div>
+            </div>
+
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">X-Tudo</h3>
+                    <h4>Valor: <span class="price">R$21,90</span></h4>
+                    <p>Pão de Brioche, Hambúrguer Artesanal, Queijo, Alface, Tomate, Bacon, Ovo e Molho</p>
+                </div>
+            </div>
+
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">Contra-filé</h3>
+                    <h4>Valor: <span class="price">R$21,90</span></h4>
+                    <p>Pão de Parmesão, Contra-filé, Queijo, Molho e Vinagrete</p>
+                </div>
+            </div>
+
+            <div class="movie-product">
+                <img src="https://th.bing.com/th/id/OIP.g-D0_3d4n30xT8wUafpNeAAAAA?rs=1&pid=ImgDetMain"
+                    alt="Imagem genérica" class="product-image">
+                <div class="info">
+                    <h3 class="Title">Filé de Frango</h3>
+                    <h4>Valor: <span class="price">R$17,90</span></h4>
+                    <p>Pão de Parmesão, Filé de Frango, Queijo, Molho e Vinagrete</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carrinho" id="carrinho">
+        <div class="container">
+            <h2>Carrinho de Compras</h2>
+
+            <div id="mensagem"></div>
+
+            <form id="cartForm">
+                <label for="customerName">Nome do Cliente:</label>
+                <input type="text" id="customerName" name="customerName" placeholder="Digite o seu nome" required>
+
+                <label for="produto">Escolha o Produto:</label>
+                <select id="produto" name="produto" required>
+                    <option value="X-Burguer">X-Burguer</option>
+                    <option value="X-Salada">X-Salada</option>
+                    <option value="X-Bacon">X-Bacon</option>
+                    <option value="X-Egg">X-Egg</option>
+                    <option value="X-Tudo">X-Tudo</option>
+                    <option value="Contra-filé">Contra-filé</option>
+                    <option value="Filé de Frango">Filé de Frango</option>
+                </select>
+
+                <label for="endereco">Endereço de Entrega:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Digite o seu endereço" required>
+
+                <input type="submit" value="Enviar pedido">
+            </form>
+
+            <div class="product-list" id="productList">
+                <!-- Produtos adicionados aparecerão aqui -->
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

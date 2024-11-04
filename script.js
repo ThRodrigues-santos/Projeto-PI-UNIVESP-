@@ -1,0 +1,16 @@
+document.getElementById('cartForm').addEventListener('submit', function(event) {
+    alert("Pedido enviado com sucesso!");
+
+    const formData = new FormData(this);
+
+    fetch('/adicionar', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('mensagem').innerText = data.message;
+        document.getElementById('cartForm').reset(); // Limpa o formulário
+    })
+    .catch(error => console.error('Erro:', error));
+});
